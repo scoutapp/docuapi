@@ -1,0 +1,5 @@
+<!-- Takes href and display text -->
+<div class="copy-link-container" style="display: flex">
+    <a href="{{ .Get 0 }}" onmouseover="addCopyLink(this)"> {{ .Get 1 }}</a>
+    <span class="copy-link" onclick="textToClipboard()"> © </span>
+</div>

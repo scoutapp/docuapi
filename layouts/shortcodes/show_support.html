@@ -1,0 +1,25 @@
+<!-- Takes image manifest name and image alt -->
+<div class='supported-lang-container'>
+<p>Supported:</p>
+
+{{ $ruby := index .Site.Data.rails_manifest "public_header_ruby_png" }}
+{{ $python := index .Site.Data.rails_manifest "public_header_python_png" }}
+{{ $php := index .Site.Data.rails_manifest "landing_php_logo_png" }}
+{{ $elixir := index .Site.Data.rails_manifest "public_header_elixir_png" }}
+{{ $node := index .Site.Data.rails_manifest "public_header_nodejs_logo_svg" }}
+{{ if in (.Get 0) "Ruby"}}
+<img alt="Ruby" src="{{ .Site.Params.assets_url }}{{$ruby}}"/>
+{{ end }}
+{{ if in (.Get 0) "Python"}}
+<img alt="Python" src="{{ .Site.Params.assets_url }}{{$python}}"/>
+{{ end }}
+{{ if in (.Get 0) "PHP"}}
+<img alt="PHP" src="{{ .Site.Params.assets_url }}{{$php}}"/>
+{{ end }}
+{{ if in (.Get 0) "Node"}}
+<img alt="Node" src="{{ .Site.Params.assets_url }}{{$node}}"/>
+{{ end }}
+{{ if in (.Get 0) "Elixir"}}
+<img alt="Elixir" src="{{ .Site.Params.assets_url }}{{$elixir}}"/>
+{{ end }}
+</div>

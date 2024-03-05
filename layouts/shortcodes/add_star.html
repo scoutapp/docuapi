@@ -1,0 +1,2 @@
+{{ $image_path := index .Site.Data.rails_manifest "docs_star_png" }}
+<img alt="{{ .Get 1 }}" src="{{ .Site.Params.assets_url }}{{$image_path}}"/><span>{{.Get 0 }}</span>

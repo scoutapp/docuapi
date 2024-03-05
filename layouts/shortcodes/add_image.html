@@ -1,0 +1,8 @@
+<!-- Takes image manifest name and image alt -->
+{{ $manifest_name := .Get 0 }}
+{{ $image_path := index .Site.Data.rails_manifest $manifest_name }}
+{{if in (.Get 0) "http"}}
+    <img alt="{{ .Get 1 }}" src="{{.Get 0}}"/>
+{{ else }}
+    <img alt="{{ .Get 1 }}" src="{{ .Site.Params.assets_url }}{{$image_path}}"/>
+{{ end }}

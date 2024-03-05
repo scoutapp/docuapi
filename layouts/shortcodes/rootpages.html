@@ -1,0 +1,6 @@
+{{ $root_pages := where .Site.Pages "Params.root" true }}
+{{ range $page := (sort $root_pages ".Params.root_order" "asc") }}
+    <li>
+        <a href="{{ substr .Site.BaseURL 0 -1 }}{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+    </li>
+{{ end }}

@@ -1,0 +1,63 @@
+{{ $ruby := index .Site.Data.rails_manifest "public_header_ruby_png" }}
+{{ $python := index .Site.Data.rails_manifest "public_header_python_png" }}
+{{ $php := index .Site.Data.rails_manifest "landing_php_logo_png" }}
+{{ $elixir := index .Site.Data.rails_manifest "public_header_elixir_png" }}
+{{ $node := index .Site.Data.rails_manifest "public_header_nodejs_logo_svg" }}
+{{ $opentelemetry := index .Site.Data.rails_manifest "public_opentelemetry_opentelemetry_icon_color_png" }}
+
+<div id="overview_container">
+  <div class='agent'>
+    <h3>
+      <img alt="Ruby" src="{{ .Site.Params.assets_url }}{{$ruby}}"/>
+      <a href="/docs/ruby">Ruby Agent</a>
+    </h3>
+    <p>
+      View our docs for installing, configuring, and troubleshooting the Scout Ruby agent.
+    </p>
+  </div>
+  <div class='agent'>
+    <h3>
+      <img alt="Python" src="{{ .Site.Params.assets_url }}{{$python}}"/>
+      <a href="/docs/python">Python Agent</a>
+    </h3>
+    <p>
+      View our docs for installing, configuring, and troubleshooting the Scout Python agent.
+    </p>
+  </div>
+  <div class='agent'>
+    <h3>
+      <img alt="PHP" src="{{ .Site.Params.assets_url }}{{$php}}"/>
+      <a href="/docs/php">PHP Agent</a>
+    </h3>
+    <p>
+      View our docs for installing, configuring, and troubleshooting the Scout PHP agent.
+    </p>
+  </div>
+  <div class='agent'>
+    <h3>
+      <img alt="Elixir" src="{{ .Site.Params.assets_url }}{{$elixir}}"/>
+      <a href="/docs/elixir">Elixir Agent</a>
+    </h3>
+    <p>
+      View our docs for installing, configuring, and troubleshooting the Scout Elixir agent.
+    </p>
+  </div>
+  <div class='agent'>
+    <h3>
+      <img alt="Node" src="{{ .Site.Params.assets_url }}{{$node}}"/>
+      <a href="/docs/node">NodeJS Agent</a>
+    </h3>
+    <p>
+      View our docs for installing, configuring, and troubleshooting the Scout NodeJS agent.
+    </p>
+  </div>
+  <div class='agent'>
+    <h3>
+      <img alt="OpenTelemetry" src="{{ .Site.Params.assets_url }}{{$opentelemetry}}"/>
+      <a href="/docs/opentelemetry">OpenTelemetry</a>
+    </h3>
+    <p>
+      Learn more about adding additional observability across your tech stack.
+    </p>
+  </div>
+</div>

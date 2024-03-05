@@ -1,0 +1,13 @@
+{{ $asset_name := .Get 1 }}
+{{ $image_path := index .Site.Data.rails_manifest $asset_name }}
+<div class='integration'>
+  <div class='image-container'>
+    <img alt="{{.Get 0}}" src="{{ .Site.Params.assets_url }}{{$image_path}}"/>
+  </div>
+  <h3>
+    <a href="{{.Get 2}}">{{.Get 0}}</a>
+  </h3>
+  <p>
+    {{.Get 3}}
+  </p>
+</div>
